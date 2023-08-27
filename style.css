@@ -9,6 +9,12 @@
   color: yellow;
 }
 
+
+.gone {
+  background-color: #252525;
+  color: #252525;
+}
+
 .wrapper {
   display: flex;
   min-height: 100vh;
@@ -21,6 +27,21 @@
 }
 
 .remove:hover {
+  transform: scale(1.3);
+}
+
+.edit {
+  cursor: pointer;
+  float: right;
+  transition: transform 0.25s ease;
+  margin-right: 20px;
+}
+
+.editing {
+  outline: 2px solid #4ee0f5;
+}
+
+.edit:hover {
   transform: scale(1.3);
 }
 
@@ -82,7 +103,9 @@
 
 .complete {
   cursor: pointer;
+  float: left;
   padding-right: 11px;
+  opacity: 1;
 }
 
 input {
@@ -118,6 +141,11 @@ ul {
 
 li {
   padding-block: 5px;
+  align-items: center;
+}
+
+.complete2 {
+  opacity:1;
 }
 
 #tasks {
@@ -138,7 +166,9 @@ li {
   padding-block: 12px;
   padding-inline: 11px;
   border-radius: 10px;
-  width: 100%;
+  width: 100%;  
+  transition: background-color 0.3s ease;
+  cursor: default;
 }
 
 #tasks button {
@@ -240,8 +270,36 @@ li {
   padding: 18px;
 }
 
+.none {
+  display: none;
+  transition: 0.5s ease;
+}
+
 .update-title {
   font-weight: bold;
   margin-block: 10px;
 }
 
+.select {
+  margin-left: 5%;
+  padding-inline: 15px;
+  padding-block: 12px;
+  max-width: 25%;
+  width: 120px;
+  margin-block: 7px;
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  outline: none;
+  background-color:rgb(27, 27, 27);
+  border-radius: 10px;
+  color: white;
+  appearance:none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.placeholder {
+  background-color: #4ee0f5;
+  padding: 0;
+  height: 0.5vh;
+}
