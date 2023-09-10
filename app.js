@@ -60,11 +60,18 @@ document.addEventListener("DOMContentLoaded", function() {
         removeTaskFromStorage(taskText);
       }
       if (event.target.classList.contains('fa-pen')) {
+       
         const taskItem = event.target.closest('li');
+        const remove = taskItem.querySelector(".fa-trash");
+        const edit = taskItem.querySelector(".fa-pen");
+        const complete = taskItem.querySelector(".fa-circle");
+        remove.style.visibility = "hidden";
+        edit.style.visibility = "hidden";
+        complete.style.visibility = "hidden";
+        taskItem.visibility = "visible"
         taskItem.setAttribute('contenteditable', true);
         taskItem.focus();
         taskItem.classList.add('editing');
-  
         taskItem.addEventListener('blur', function() {
           if (taskItem.classList.contains('editing')) {
             taskItem.setAttribute('contenteditable', false);
@@ -198,4 +205,3 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-  
