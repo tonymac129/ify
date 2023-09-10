@@ -46,40 +46,6 @@
 }
 
 
-#notes-section {
-  margin-left: 2.5%;
-  padding-left: 3%;
-  padding-block: 20px;
-  width: 25%;
-  max-height: 330px;
-  height: 330px;
-  align-items: center;
-  background-color: rgba(49, 49, 49,0.9);
-  margin-left: 2.5%;
-  padding-inline: 2%;
-  border-radius: 40px;
-  font-size: 18px;
-  color: white;
-  overflow: auto;
-}
-
-#notes-section button {
-  margin-inline: 5%;
-  width: 90%;
-  padding-block: 5px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  border-radius: 50px;
-  font-size: 15px;
-  background-color: white;
-}
-
-#notes-section button:hover {
-  background-color: white;
-  text-decoration: underline;
-}
-
 .input {
   width: 90%;
   margin-inline: 5%;
@@ -90,7 +56,6 @@
   display: flex;
   max-height: 35vh;
   align-items: center;
-  
 }
 
 #tasks-input {
@@ -275,6 +240,10 @@ li {
   transition: 0.5s ease;
 }
 
+.none2 {
+  visibility: hidden;
+}
+
 .update-title {
   font-weight: bold;
   margin-block: 10px;
@@ -302,4 +271,79 @@ li {
   background-color: #4ee0f5;
   padding: 0;
   height: 0.5vh;
+}
+
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-inline: 5%;
+  background-color: rgb(37, 37, 37);
+}
+
+.textarea {
+  width: 100%;
+  height: 80vh;
+  outline: none;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  padding-block: 40px;
+  border: 2px solid #4ee0f5;
+  resize: none;
+}
+
+.save-button {
+  border: none;
+  outline: none;
+  background-color: #4ee0f5;
+  color: black;
+  padding-inline: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-block: 10px;
+  cursor: pointer;
+}
+
+.note {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin-inline: 10px;
+  margin-block: 5px;
+  width: 200px;
+  color: white;
+  padding-inline: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  height: 200px;
+  box-shadow: 0 0 2px rgb(134, 134, 134);
+  padding-bottom: 10px;
+  transition: transform 0.3s ease;
+   background-repeat: no-repeat;
+  background-size:contain;
+  background-color: rgb(27, 27, 27);
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.note:hover {
+  box-shadow: 0 0 10px #4ee0f5;
+}
+
+.title {
+  text-align: left;
+  margin-inline: 20px;
+  font-size: 20px;
+}
+
+.preview {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: left;
+  margin-inline: 20px;
+  margin-block: 5px;
 }
